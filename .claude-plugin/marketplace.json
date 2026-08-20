@@ -1,0 +1,31 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "lucitra",
+  "metadata": {
+    "description": "Lucitra Claude Code plugins — global engineering practice, delivery operations, and wiki-resident org skills"
+  },
+  "owner": { "name": "Lucitra", "url": "https://github.com/lucitra" },
+  "plugins": [
+    {
+      "name": "agent-skills",
+      "description": "Project-agnostic engineering practice: operating principles, scope discipline, TDD, incremental implementation, debugging, code review, security and threat modeling, performance, observability, git workflow, PR lifecycle and shipping",
+      "version": "0.1.0",
+      "author": { "name": "Lucitra", "url": "https://github.com/lucitra" },
+      "source": { "source": "url", "url": "https://github.com/lucitra/agent-skills.git" }
+    },
+    {
+      "name": "lucitra-skills",
+      "description": "Lucitra delivery operations: deploy, cloud-build, qa, npm-publish, triage-dependabot, create-plan, retro, reset and sunset",
+      "version": "0.1.0",
+      "author": { "name": "Lucitra", "url": "https://github.com/lucitra" },
+      "source": { "source": "url", "url": "https://github.com/lucitra/lucitra-skills.git" }
+    },
+    {
+      "name": "lucitra-wiki-skills",
+      "description": "Org skills that live beside the decisions they encode — delivery review, story implementation, decision records, release readiness, repo orientation, work shaping, trust posture, theme audit, wiki ingest and lint",
+      "version": "0.1.0",
+      "author": { "name": "Lucitra", "url": "https://github.com/lucitra" },
+      "source": { "source": "url", "url": "https://github.com/lucitra/lucitra-wiki.git" }
+    }
+  ]
+}
