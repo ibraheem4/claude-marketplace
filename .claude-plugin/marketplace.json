@@ -25,7 +25,14 @@
       "description": "Org skills that live beside the decisions they encode — work shaping, repo orientation, story implementation, delivery review, interface design and theme audit, release readiness, decision records, trust posture, mail authentication records, capture teardown, wiki ingest and lint",
       "version": "0.2.0",
       "author": { "name": "Lucitra", "url": "https://github.com/lucitra" },
-      "source": { "source": "url", "url": "https://github.com/lucitra/lucitra-wiki.git" }
+      "source": { "source": "url", "url": "https://github.com/lucitra/brain.git" }
+    },
+    {
+      "name": "lucitra-crm-skills",
+      "description": "Projection of the Lucitra company brain into Twenty CRM — schema reconciliation against registries/crm-schema.yaml, brain-to-Twenty record sync on brainSlug, and dated read-back snapshots that exclude third-party personal data by role",
+      "version": "0.2.0",
+      "author": { "name": "Lucitra", "url": "https://github.com/lucitra" },
+      "source": { "source": "url", "url": "https://github.com/lucitra/lucitra-crm.git" }
     }
   ]
 }
