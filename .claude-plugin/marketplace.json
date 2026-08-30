@@ -22,8 +22,8 @@
     },
     {
       "name": "wiki-skills",
-      "description": "Org skills that live beside the decisions they encode — delivery review, story implementation, decision records, release readiness, repo orientation, work shaping, trust posture, theme audit, wiki ingest and lint",
-      "version": "0.1.0",
+      "description": "Org skills that live beside the decisions they encode — work shaping, repo orientation, story implementation, delivery review, interface design and theme audit, release readiness, decision records, trust posture, mail authentication records, capture teardown, wiki ingest and lint",
+      "version": "0.2.0",
       "author": { "name": "Acme", "url": "https://github.com/ibraheem4" },
       "source": { "source": "url", "url": "https://github.com/ibraheem4/wiki.git" }
     }
