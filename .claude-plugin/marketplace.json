@@ -25,7 +25,14 @@
       "description": "Org skills that live beside the decisions they encode — work shaping, repo orientation, story implementation, delivery review, interface design and theme audit, release readiness, decision records, trust posture, mail authentication records, capture teardown, wiki ingest and lint",
       "version": "0.2.0",
       "author": { "name": "Acme", "url": "https://github.com/ibraheem4" },
-      "source": { "source": "url", "url": "https://github.com/ibraheem4/wiki.git" }
+      "source": { "source": "url", "url": "https://github.com/ibraheem4/brain.git" }
+    },
+    {
+      "name": "crm-skills",
+      "description": "Projection of the Acme company brain into Twenty CRM — schema reconciliation against registries/crm-schema.yaml, brain-to-Twenty record sync on brainSlug, and dated read-back snapshots that exclude third-party personal data by role",
+      "version": "0.2.0",
+      "author": { "name": "Acme", "url": "https://github.com/ibraheem4" },
+      "source": { "source": "url", "url": "https://github.com/ibraheem4/crm.git" }
     }
   ]
 }
