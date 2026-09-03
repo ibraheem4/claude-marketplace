@@ -8,8 +8,8 @@
   "plugins": [
     {
       "name": "agent-skills",
-      "description": "Project-agnostic engineering practice and workstation operations: operating principles, scope discipline, TDD, incremental implementation, debugging, code review, security and threat modeling, performance, observability, git workflow, PR lifecycle and shipping; plus disk reclaim, hidden-service discovery, safe repo removal, failing-fleet triage, and cross-source work summaries.",
-      "version": "0.2.2",
+      "description": "Project-agnostic engineering practice and workstation operations: operating principles, scope discipline, TDD, incremental implementation, debugging, code review, security and threat modeling, performance, observability, git workflow, PR lifecycle and shipping; plus disk reclaim, hidden-service discovery, safe repo removal, failing-fleet triage, per-PR preview environments, false verification signals, session handoffs, and cross-source work summaries.",
+      "version": "0.3.0",
       "author": { "name": "Acme", "url": "https://github.com/ibraheem4" },
       "source": { "source": "url", "url": "https://github.com/ibraheem4/agent-skills.git" }
     },
