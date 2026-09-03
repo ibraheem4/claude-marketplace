@@ -9,9 +9,16 @@
     {
       "name": "agent-skills",
       "description": "Project-agnostic engineering practice and workstation operations: operating principles, scope discipline, TDD, incremental implementation, debugging, code review, security and threat modeling, performance, observability, git workflow, PR lifecycle and shipping; plus disk reclaim, hidden-service discovery, safe repo removal, failing-fleet triage, per-PR preview environments, false verification signals, session handoffs, and cross-source work summaries.",
-      "version": "0.3.0",
+      "version": "0.4.0",
       "author": { "name": "Acme", "url": "https://github.com/ibraheem4" },
       "source": { "source": "url", "url": "https://github.com/ibraheem4/agent-skills.git" }
+    },
+    {
+      "name": "ops-skills",
+      "description": "Vendor and tool operations for the systems a team coordinates in rather than builds: issue trackers and knowledge wikis. Confirming a tracker points at the right workspace before writing, restraint about whose tickets you touch, filing by the collection's own taxonomy, and the wiki write calls that report success and change nothing.",
+      "version": "0.1.0",
+      "author": { "name": "Acme", "url": "https://github.com/ibraheem4" },
+      "source": { "source": "url", "url": "https://github.com/ibraheem4/ops-skills.git" }
     },
     {
       "name": "delivery-skills",
