@@ -4,42 +4,76 @@
   "metadata": {
     "description": "Acme Claude Code plugins — global engineering practice, delivery operations, and wiki-resident org skills"
   },
-  "owner": { "name": "Acme", "url": "https://github.com/ibraheem4" },
+  "owner": {
+    "name": "Acme",
+    "url": "https://github.com/ibraheem4"
+  },
   "plugins": [
     {
       "name": "agent-skills",
       "description": "Project-agnostic engineering practice and workstation operations: operating principles, scope discipline, incremental implementation, code review, security and threat modeling, performance, observability, git workflow, PR lifecycle and shipping; plus disk reclaim, hidden-service discovery, safe repo removal, failing-fleet triage, per-PR preview environments, false verification signals, session handoffs, and cross-source work summaries.",
       "version": "0.5.0",
-      "author": { "name": "Acme", "url": "https://github.com/ibraheem4" },
-      "source": { "source": "url", "url": "https://github.com/ibraheem4/agent-skills.git" }
+      "author": {
+        "name": "Acme",
+        "url": "https://github.com/ibraheem4"
+      },
+      "source": {
+        "source": "url",
+        "url": "https://github.com/ibraheem4/agent-skills.git"
+      }
     },
     {
       "name": "ops-skills",
       "description": "Vendor and tool operations for the systems a team coordinates in rather than builds: issue trackers and knowledge wikis. Confirming a tracker points at the right workspace before writing, restraint about whose tickets you touch, filing by the collection's own taxonomy, and the wiki write calls that report success and change nothing.",
       "version": "0.1.0",
-      "author": { "name": "Acme", "url": "https://github.com/ibraheem4" },
-      "source": { "source": "url", "url": "https://github.com/ibraheem4/ops-skills.git" }
+      "author": {
+        "name": "Acme",
+        "url": "https://github.com/ibraheem4"
+      },
+      "source": {
+        "source": "url",
+        "url": "https://github.com/ibraheem4/ops-skills.git"
+      }
     },
     {
       "name": "delivery-skills",
       "description": "Acme delivery operations: deploy, cloud-build, qa, npm-publish, triage-dependabot, create-plan, retro, reset and sunset",
       "version": "0.1.0",
-      "author": { "name": "Acme", "url": "https://github.com/ibraheem4" },
-      "source": { "source": "url", "url": "https://github.com/ibraheem4/delivery-skills.git" }
+      "author": {
+        "name": "Acme",
+        "url": "https://github.com/ibraheem4"
+      },
+      "source": {
+        "source": "url",
+        "url": "https://github.com/ibraheem4/delivery-skills.git"
+      }
     },
     {
-      "name": "wiki-skills",
-      "description": "Org skills that live beside the decisions they encode — work shaping, repo orientation, story implementation, delivery review, interface design and theme audit, release readiness, decision records, trust posture, mail authentication records, GCP resource sweeps, capture teardown, wiki ingest and lint",
-      "version": "0.3.0",
-      "author": { "name": "Acme", "url": "https://github.com/ibraheem4" },
-      "source": { "source": "url", "url": "https://github.com/ibraheem4/brain.git" }
+      "name": "venture-operations",
+      "description": "Company operations that live beside the decisions they encode: a governed delivery pipeline (work shaping, repo orientation, story implementation, delivery review, release readiness), a trust and compliance chain with separation of duties, knowledge-base operations (decision records, capture teardown, wiki ingest and lint), and interface design and theme audit against a named design contract.",
+      "version": "0.4.0",
+      "author": {
+        "name": "Ibraheem Abdul-Malik",
+        "url": "https://github.com/ibraheem4"
+      },
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/ibraheem4/brain",
+        "path": "skills"
+      }
     },
     {
       "name": "crm-skills",
       "description": "Projection of the Acme company brain into Twenty CRM — schema reconciliation against registries/crm-schema.yaml, brain-to-Twenty record sync on brainSlug, and dated read-back snapshots that exclude third-party personal data by role",
       "version": "0.2.0",
-      "author": { "name": "Acme", "url": "https://github.com/ibraheem4" },
-      "source": { "source": "url", "url": "https://github.com/ibraheem4/crm.git" }
+      "author": {
+        "name": "Acme",
+        "url": "https://github.com/ibraheem4"
+      },
+      "source": {
+        "source": "url",
+        "url": "https://github.com/ibraheem4/crm.git"
+      }
     }
   ]
 }
