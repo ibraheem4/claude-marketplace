@@ -23,9 +23,9 @@
       }
     },
     {
-      "name": "ops-skills",
+      "name": "vendor-ops",
       "description": "Vendor and tool operations for the systems a team coordinates in rather than builds: issue trackers and knowledge wikis. Confirming a tracker points at the right workspace before writing, restraint about whose tickets you touch, filing by the collection's own taxonomy, and the wiki write calls that report success and change nothing.",
-      "version": "0.1.1",
+      "version": "0.2.0",
       "author": {
         "name": "Ibraheem Abdul-Malik",
         "url": "https://github.com/ibraheem4"
@@ -63,9 +63,9 @@
       }
     },
     {
-      "name": "crm-skills",
+      "name": "crm-sync",
       "description": "Projection of the Acme company brain into Twenty CRM — schema reconciliation against registries/crm-schema.yaml, brain-to-Twenty record sync on brainSlug, and dated read-back snapshots that exclude third-party personal data by role",
-      "version": "0.2.1",
+      "version": "0.3.0",
       "author": {
         "name": "Ibraheem Abdul-Malik",
         "url": "https://github.com/ibraheem4"
