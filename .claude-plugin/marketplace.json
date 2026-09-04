@@ -12,10 +12,10 @@
     {
       "name": "agent-skills",
       "description": "Project-agnostic engineering practice and workstation operations: operating principles, scope discipline, incremental implementation, code review, security and threat modeling, performance, observability, git workflow, PR lifecycle and shipping; plus disk reclaim, hidden-service discovery, safe repo removal, failing-fleet triage, per-PR preview environments, false verification signals, session handoffs, and cross-source work summaries.",
-      "version": "0.5.0",
+      "version": "0.5.1",
       "author": {
-        "name": "Lucitra",
-        "url": "https://github.com/lucitra"
+        "name": "Ibraheem Abdul-Malik",
+        "url": "https://github.com/ibraheem4"
       },
       "source": {
         "source": "url",
@@ -25,10 +25,10 @@
     {
       "name": "ops-skills",
       "description": "Vendor and tool operations for the systems a team coordinates in rather than builds: issue trackers and knowledge wikis. Confirming a tracker points at the right workspace before writing, restraint about whose tickets you touch, filing by the collection's own taxonomy, and the wiki write calls that report success and change nothing.",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "author": {
-        "name": "Lucitra",
-        "url": "https://github.com/lucitra"
+        "name": "Ibraheem Abdul-Malik",
+        "url": "https://github.com/ibraheem4"
       },
       "source": {
         "source": "url",
@@ -38,10 +38,10 @@
     {
       "name": "lucitra-skills",
       "description": "Lucitra delivery operations: deploy, cloud-build, qa, npm-publish, triage-dependabot, create-plan, retro, reset and sunset",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "author": {
-        "name": "Lucitra",
-        "url": "https://github.com/lucitra"
+        "name": "Ibraheem Abdul-Malik",
+        "url": "https://github.com/ibraheem4"
       },
       "source": {
         "source": "url",
@@ -65,10 +65,10 @@
     {
       "name": "lucitra-crm-skills",
       "description": "Projection of the Lucitra company brain into Twenty CRM — schema reconciliation against registries/crm-schema.yaml, brain-to-Twenty record sync on brainSlug, and dated read-back snapshots that exclude third-party personal data by role",
-      "version": "0.2.0",
+      "version": "0.2.1",
       "author": {
-        "name": "Lucitra",
-        "url": "https://github.com/lucitra"
+        "name": "Ibraheem Abdul-Malik",
+        "url": "https://github.com/ibraheem4"
       },
       "source": {
         "source": "url",
