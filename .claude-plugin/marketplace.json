@@ -50,8 +50,8 @@
     },
     {
       "name": "venture-operations",
-      "description": "Company operations that live beside the decisions they encode: a governed delivery pipeline (work shaping, repo orientation, story implementation, delivery review, release readiness), a trust and compliance chain with separation of duties, knowledge-base operations (decision records, capture teardown, wiki ingest and lint), and interface design and theme audit against a named design contract.",
-      "version": "0.4.0",
+      "description": "Company operations that live beside the decisions they encode: a governed delivery pipeline (work shaping, repo orientation, story implementation, delivery review, release readiness), a trust and compliance chain with separation of duties (posture review, evidence investigation, remediation review, founder brief), knowledge-base operations (decision records, capture teardown, wiki ingest and lint), and design work against a named contract \u2014 interface design and theme audit for our own surfaces, website style extraction for a reference site.",
+      "version": "0.6.0",
       "author": {
         "name": "Ibraheem Abdul-Malik",
         "url": "https://github.com/ibraheem4"
