@@ -37,8 +37,8 @@
     },
     {
       "name": "delivery-skills",
-      "description": "Acme delivery operations: deploy, cloud-build, qa, npm-publish, triage-dependabot, create-plan, retro, reset and sunset",
-      "version": "0.1.1",
+      "description": "Delivery operations: deploy, cloud-build, qa, npm-publish, triage-dependabot, create-plan, retro, reset and sunset",
+      "version": "0.2.0",
       "author": {
         "name": "Ibraheem Abdul-Malik",
         "url": "https://github.com/ibraheem4"
@@ -60,19 +60,6 @@
         "source": "git-subdir",
         "url": "https://github.com/ibraheem4/brain",
         "path": "skills"
-      }
-    },
-    {
-      "name": "crm-sync",
-      "description": "Projection of the Acme company brain into Twenty CRM \u2014 schema reconciliation against registries/crm-schema.yaml, brain-to-Twenty record sync on brainSlug, and dated read-back snapshots that exclude third-party personal data by role",
-      "version": "0.3.0",
-      "author": {
-        "name": "Ibraheem Abdul-Malik",
-        "url": "https://github.com/ibraheem4"
-      },
-      "source": {
-        "source": "url",
-        "url": "https://github.com/ibraheem4/crm.git"
       }
     },
     {

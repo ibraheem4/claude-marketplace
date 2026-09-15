@@ -13,9 +13,8 @@ Claude Code plugin marketplace.
 | `agent-skills` | Engineering practice, project-agnostic — no project coupling | `ibraheem4/agent-skills` |
 | `marketing-skills` | Marketing and content: copy, landing pages, SEO, structured data | `ibraheem4/marketing-skills` |
 | `vendor-ops` | Vendor and tool operations — issue trackers, knowledge wikis | `ibraheem4/ops-skills` |
-| `delivery-skills` | Delivery operations | `ibraheem4/delivery-skills` |
+| `delivery-skills` | Delivery operations — deploy, QA, dependency triage, release | `ibraheem4/delivery-skills` |
 | `venture-operations` | Company operations and knowledge base | `ibraheem4/brain` |
-| `crm-sync` | CRM projection | `ibraheem4/crm` |
 
 ## How a version reaches an install
 
@@ -40,6 +39,5 @@ is for things that apply everywhere.
 ## Codex
 
 Claude Code plugins do not serve the Codex runtime. `~/.codex/skills/` holds symlinks into
-the local checkouts (`~/Projects/skills/agent-skills/skills/`, `~/Acme/brain/skills/`)
-and must not be torn down. Those are filesystem paths, so moving a repo between GitHub
-owners does not affect them.
+the local checkouts and must not be torn down. Those are filesystem paths, so moving a repo
+between GitHub owners does not affect them.
