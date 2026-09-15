@@ -2,10 +2,10 @@
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
   "name": "ibraheem4",
   "metadata": {
-    "description": "Acme Claude Code plugins \u2014 global engineering practice, delivery operations, and wiki-resident org skills"
+    "description": "Claude Code plugins: engineering practice, marketing and content, vendor and tool operations, delivery operations, and company knowledge."
   },
   "owner": {
-    "name": "Acme",
+    "name": "Ibraheem Abdul-Malik",
     "url": "https://github.com/ibraheem4"
   },
   "plugins": [
