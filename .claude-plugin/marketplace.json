@@ -2,7 +2,7 @@
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
   "name": "ibraheem4",
   "metadata": {
-    "description": "Claude Code plugins: engineering practice, marketing and content, vendor and tool operations, and delivery operations."
+    "description": "Claude Code plugins: engineering practice, frontend and UI, infrastructure and machine operations, delivery operations and governance, marketing and content, and vendor and tool operations."
   },
   "owner": {
     "name": "Ibraheem Abdul-Malik",
@@ -12,7 +12,7 @@
     {
       "name": "agent-skills",
       "description": "Project-agnostic engineering practice and workstation operations: operating principles, scope discipline, incremental implementation, code review, security and threat modeling, performance, observability, git workflow, PR lifecycle and shipping; plus disk reclaim, hidden-service discovery, safe repo removal, failing-fleet triage, per-PR preview environments, local bring-up, AWS and DNS infrastructure, false verification signals, session handoffs, verifying a document before citing it, and cross-source work summaries and prioritized work queues, and wiring social OAuth providers whose client secret is shown exactly once; plus accessibility engineering, Tailwind v4 conventions, and reviewing UI against web interface guidelines.",
-      "version": "0.8.0",
+      "version": "1.0.0",
       "author": {
         "name": "Ibraheem Abdul-Malik",
         "url": "https://github.com/ibraheem4"
@@ -24,7 +24,7 @@
     },
     {
       "name": "vendor-ops",
-      "description": "Vendor and tool operations for the systems a team coordinates in rather than builds: issue trackers and knowledge wikis. Confirming a tracker points at the right workspace before writing, restraint about whose tickets you touch, filing by the collection's own taxonomy, and the wiki write calls that report success and change nothing.",
+      "description": "Vendor and tool operations for the systems a team coordinates in rather than builds: issue trackers and knowledge wikis. Confirming a tracker connection points at the right workspace before writing, restraint about whose tickets you touch, filing a document in the collection its own taxonomy asks for, and the wiki write calls that report success and change nothing. Every workspace value comes from a profile.",
       "version": "0.2.0",
       "author": {
         "name": "Ibraheem Abdul-Malik",
@@ -37,8 +37,8 @@
     },
     {
       "name": "delivery-skills",
-      "description": "Delivery operations: deploy, cloud-build, qa, npm-publish, triage-dependabot, create-plan, retro, reset and sunset",
-      "version": "0.2.0",
+      "description": "Delivery operations and governance: deploy, cloud build, QA, npm publish, dependency triage, planning, retros, reset and sunset \u2014 plus two chains with separation of duties. A trust chain (posture review, evidence investigation, remediation review, founder brief) and a delivery pipeline (shape work, repo orient, implement story, delivery review, release readiness), each step verified by someone other than its author.",
+      "version": "0.3.0",
       "author": {
         "name": "Ibraheem Abdul-Malik",
         "url": "https://github.com/ibraheem4"
@@ -59,6 +59,32 @@
       "source": {
         "source": "url",
         "url": "https://github.com/ibraheem4/marketing-skills.git"
+      }
+    },
+    {
+      "name": "frontend-skills",
+      "description": "Frontend and UI engineering: composition over configuration, accessibility by default, Tailwind v4 conventions, a component reference library, scroll-linked motion, reviewing a surface against web interface guidelines, and designing or auditing screens against a design contract the workspace supplies.",
+      "version": "0.2.0",
+      "author": {
+        "name": "Ibraheem Abdul-Malik",
+        "url": "https://github.com/ibraheem4"
+      },
+      "source": {
+        "source": "url",
+        "url": "https://github.com/ibraheem4/frontend-skills.git"
+      }
+    },
+    {
+      "name": "infra-skills",
+      "description": "Infrastructure and machine operations: AWS and Terraform, DNS delegation, mail authentication records, Google Workspace SSO cutover, social OAuth providers, per-PR preview environments, GCP resource sweeps, plus workstation operations \u2014 disk reclaim, hidden services, failing-fleet triage, safe repo removal and cold local bring-up.",
+      "version": "0.1.0",
+      "author": {
+        "name": "Ibraheem Abdul-Malik",
+        "url": "https://github.com/ibraheem4"
+      },
+      "source": {
+        "source": "url",
+        "url": "https://github.com/ibraheem4/infra-skills.git"
       }
     }
   ]
