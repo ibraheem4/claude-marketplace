@@ -8,12 +8,14 @@ Claude Code plugin marketplace.
 
 ## Plugins
 
-| Plugin | Scope | Source |
+| Plugin | Covers | Repo |
 |---|---|---|
-| `agent-skills` | Engineering practice, project-agnostic — no project coupling | `ibraheem4/agent-skills` |
-| `marketing-skills` | Marketing and content: copy, landing pages, SEO, structured data | `ibraheem4/marketing-skills` |
-| `vendor-ops` | Vendor and tool operations — issue trackers, knowledge wikis | `ibraheem4/ops-skills` |
-| `delivery-skills` | Delivery operations — deploy, QA, dependency triage, release | `ibraheem4/delivery-skills` |
+| `agent-skills` | Engineering practice: how to work, what to check, what to refuse | `ibraheem4/agent-skills` |
+| `frontend-skills` | UI engineering, accessibility, Tailwind v4, design contracts | `ibraheem4/frontend-skills` |
+| `infra-skills` | AWS, GCP, DNS, identity, preview environments, workstation ops | `ibraheem4/infra-skills` |
+| `delivery-skills` | Deploy, QA, release, and the trust and delivery governance chains | `ibraheem4/delivery-skills` |
+| `marketing-skills` | Copy, SEO, CRO, email, analytics, competitor teardown | `ibraheem4/marketing-skills` |
+| `vendor-ops` | Issue trackers and knowledge wikis | `ibraheem4/ops-skills` |
 
 ## How a version reaches an install
 
