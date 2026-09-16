@@ -14,7 +14,6 @@ Claude Code plugin marketplace.
 | `marketing-skills` | Marketing and content: copy, landing pages, SEO, structured data | `ibraheem4/marketing-skills` |
 | `vendor-ops` | Vendor and tool operations — issue trackers, knowledge wikis | `ibraheem4/ops-skills` |
 | `delivery-skills` | Delivery operations — deploy, QA, dependency triage, release | `ibraheem4/delivery-skills` |
-| `venture-operations` | Company operations and knowledge base | `ibraheem4/brain` |
 
 ## How a version reaches an install
 
