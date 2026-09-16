@@ -2,7 +2,7 @@
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
   "name": "ibraheem4",
   "metadata": {
-    "description": "Claude Code plugins: engineering practice, marketing and content, vendor and tool operations, delivery operations, and company knowledge."
+    "description": "Claude Code plugins: engineering practice, marketing and content, vendor and tool operations, and delivery operations."
   },
   "owner": {
     "name": "Ibraheem Abdul-Malik",
@@ -46,20 +46,6 @@
       "source": {
         "source": "url",
         "url": "https://github.com/ibraheem4/delivery-skills.git"
-      }
-    },
-    {
-      "name": "venture-operations",
-      "description": "Company operations that live beside the decisions they encode: a governed delivery pipeline (work shaping, repo orientation, story implementation, delivery review, release readiness), a trust and compliance chain with separation of duties (posture review, evidence investigation, remediation review, founder brief), knowledge-base operations (decision records, capture teardown, wiki ingest and lint), and design work against a named contract \u2014 interface design and theme audit for our own surfaces, website style extraction for a reference site.",
-      "version": "0.6.0",
-      "author": {
-        "name": "Ibraheem Abdul-Malik",
-        "url": "https://github.com/ibraheem4"
-      },
-      "source": {
-        "source": "git-subdir",
-        "url": "https://github.com/ibraheem4/brain",
-        "path": "skills"
       }
     },
     {
