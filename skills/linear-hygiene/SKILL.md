@@ -106,3 +106,5 @@ Reference it plainly otherwise.
   cross-workspace sweep before anything reaches a doc or ticket.
 - Never create, close or comment without being asked. Filing a ticket is outward-facing;
   approval once is not approval always.
+  A profile `closeout` that pre-approves filing follow-ups at session close is a standing ask
+  for exactly that: creating them, never closing or commenting on anything.
