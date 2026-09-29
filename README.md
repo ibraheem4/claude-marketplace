@@ -13,6 +13,7 @@ engineering practice — these are the ones that only apply when you are buildin
 | `ui-component-lookup` | A quick reference card for any component: anatomy, props, a11y, anti-patterns |
 | `scroll-driven-animation` | Scroll-linked motion — pinning, reveal-on-enter, and why it renders blank |
 | `interface-design` | Designing or reviewing a screen against the repo's own design contract |
+| `ui-content-design` | The words inside a product UI — labels, helper text, empty and error states, consent prompts |
 | `theme-audit` | Finding drift: local foundation values, copied components, superseded references |
 
 `better-accessibility` and `web-design-guidelines` are deliberately distinct: the first is

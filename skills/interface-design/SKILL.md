@@ -76,7 +76,10 @@ This is the part most interfaces omit, and the part users meet on their worst da
    a meaning, use it only for that meaning — a status color spent on decoration stops being a
    status.
 3. Write copy that is specific and honest about missing state. No promotional filler, no
-   manufactured certainty.
+   manufactured certainty. **REQUIRED SUB-SKILL for the words themselves:** use
+   frontend-skills:ui-content-design — it carries the section contract that keeps a group of
+   controls to one shared guarantee, and the rule that an unverified claim about what the
+   system does never ships unmarked.
 4. Preserve third-party brand colors only inside official provider marks.
 5. Use motion to explain a state transition, and honor reduced motion.
 
