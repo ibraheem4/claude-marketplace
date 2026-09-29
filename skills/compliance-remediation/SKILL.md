@@ -11,6 +11,8 @@ Every workspace value here comes from a profile, never from this skill. Resolve 
 `~/<workspace>/.claude/workspace.config.md` — the workspace the caller named, or the single
 match of `~/*/.claude/workspace.config.md`. Several matches: ask which. None: say which keys
 are needed and stop.
+A key the profile leaves out means the workspace has none of that thing: say so, and skip
+what depends on it — unless skipping leaves a write unguarded, then stop.
 
 | Key | Used for |
 |---|---|
@@ -40,12 +42,12 @@ merged" but "who can apply it to every account, and when".
 
 ### 1. Audit — the platform, then the accounts
 
-- Read the platform's failing **and erroring** tests separately. Errors are usually the
+- Read `{{compliance_platform}}`'s failing **and erroring** tests separately. Errors are usually the
   platform being unable to read, not the control failing.
 - 🔴 **Many tests erroring at once → check org policies first.** A region-deny SCP that
   doesn't exempt the platform's read-only role errors every test that scans other regions.
   One narrow exemption fixes all of them.
-- Confirm every finding against the live account before writing it down. The usual
+- Confirm every finding against the live account, in each of `{{org_accounts}}`, before writing it down. The usual
   misreadings: a standard enabled on some accounts read as enabled nowhere; a webhook
   subscription read as an alarm subscriber; a live system read as a leftover.
 - Read the IaC too. A control can be **in code and unapplied** — drift, not a gap. A

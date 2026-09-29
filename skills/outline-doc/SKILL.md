@@ -11,11 +11,12 @@ Every workspace value here comes from a profile, never from this skill. Resolve 
 `~/<workspace>/.claude/workspace.config.md` — the workspace the caller named, or the single
 match of `~/*/.claude/workspace.config.md`. Several matches: ask which. None: say which keys
 are needed and stop.
+A key the profile leaves out means the workspace has none of that thing: say so, and skip
+what depends on it — unless skipping leaves a write unguarded, then stop.
 
 | Key | Used for |
 |---|---|
 | `{{wiki_tool}}` | which wiki is the system of record |
-| `{{wiki_base}}` | its base URL |
 | `{{wiki_collections}}` | which collection a subject files under |
 | `{{wiki_default_collection}}` | where to file when the subject is unclear |
 | `{{exclude_orgs}}` | other orgs whose names must never reach a doc |

@@ -17,13 +17,13 @@ Every workspace value here comes from a profile, never from this skill. Resolve 
 `~/<workspace>/.claude/workspace.config.md` — the workspace the caller named, or the single
 match of `~/*/.claude/workspace.config.md`. Several matches: ask which. None: say which keys
 are needed and stop.
+A key the profile leaves out means the workspace has none of that thing: say so, and skip
+what depends on it — unless skipping leaves a write unguarded, then stop.
 
 | Key | Used for |
 |---|---|
-| `{{tracker_workspace}}` | the workspace name every read and write must land in |
 | `{{tracker_workspace_id}}` | confirming it by id, not by display name |
 | `{{tracker_team}}` | the team tickets belong to |
-| `{{tracker}}` | which tracker, and how it is reached |
 | `{{ticket_prefix}}` | the ticket identifier prefix, e.g. `ABC-123` |
 | `{{tracker_user}}` | whose tickets you may touch |
 | `{{tracker_admin}}` | who owns the repo↔tracker integration |
