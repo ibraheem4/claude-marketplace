@@ -16,12 +16,11 @@ reverse problem: sign-ins that fail, or seem to work, for reasons unrelated to c
 Every workspace value comes from a profile, never this skill. Resolve one first:
 `~/<workspace>/.claude/workspace.config.md` — the workspace the caller named, or the single
 match of `~/*/.claude/workspace.config.md`. Several matches: ask. None: name the keys, stop.
+A key the profile leaves out means the workspace has none of that thing: say so, and skip
+what depends on it — unless skipping leaves a write unguarded, then stop.
 
 | Key | Used for |
 |---|---|
-| `{{accounts}}` | which account owns the secret |
-| `{{sso_session}}` | the session name that actually refreshes credentials |
-| `{{cloud_region}}` | region for the secret and its CMK |
 | `{{exclude_orgs}}` | tenants and orgs that must never receive these resources |
 
 Secret naming, per-product project naming and the app-per-product rule are the workspace's

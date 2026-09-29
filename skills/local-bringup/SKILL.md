@@ -17,6 +17,8 @@ Per-repo stacks and this machine's defaults come from a profile, never from this
 Resolve one first: `~/<workspace>/.claude/workspace.config.md` — the workspace the caller
 named, or the single match of `~/*/.claude/workspace.config.md`. Several matches: ask which.
 None: say which keys are needed and stop.
+A key the profile leaves out means the workspace has none of that thing: say so, and skip
+what depends on it — unless skipping leaves a write unguarded, then stop.
 
 | Key | Used for |
 |---|---|
