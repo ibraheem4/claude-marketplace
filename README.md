@@ -14,6 +14,7 @@ returns success without changing anything.
 |---|---|
 | `linear-hygiene` | confirm the workspace before any read or write; only touch your own tickets; the API calls that fail silently |
 | `outline-doc` | the wiki as system of record over repo markdown; collection choice; the patch that no-ops inside a blockquote |
+| `compliance-remediation` | compliance platforms read live state, not code; map each fix to who can apply it; rank by audit yield |
 
 ## Profiles
 
