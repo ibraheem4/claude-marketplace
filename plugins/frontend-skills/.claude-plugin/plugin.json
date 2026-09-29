@@ -1,7 +1,7 @@
 {
   "name": "frontend-skills",
   "description": "Frontend and UI engineering: composition over configuration, accessibility by default, Tailwind v4 conventions, a component reference library, scroll-linked motion, reviewing a surface against web interface guidelines, writing the words inside a product interface, and designing or auditing screens against a design contract the workspace supplies.",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "author": {
     "name": "Ibraheem Abdul-Malik",
     "url": "https://github.com/ibraheem4"

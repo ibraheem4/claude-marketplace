@@ -1,7 +1,7 @@
 # Frontend Skills
 
 Frontend and UI engineering for AI coding agents. Split out of
-[agent-skills](https://github.com/ibraheem4/agent-skills), which keeps the language-agnostic
+[agent-skills](../agent-skills), which keeps the language-agnostic
 engineering practice — these are the ones that only apply when you are building an interface.
 
 | Skill | Use when |

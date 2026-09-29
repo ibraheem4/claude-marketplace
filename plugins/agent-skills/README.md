@@ -81,9 +81,9 @@ selection context should carry. Each is a plugin of its own:
 
 | Plugin | Covers |
 |---|---|
-| [frontend-skills](https://github.com/ibraheem4/frontend-skills) | UI engineering, accessibility, Tailwind v4, component reference, scroll motion |
-| [infra-skills](https://github.com/ibraheem4/infra-skills) | AWS, GCP, DNS, mail auth, SSO, OAuth providers, preview environments, and workstation operations |
-| [delivery-skills](https://github.com/ibraheem4/delivery-skills) | Deploy, QA, release — and the governance chains: trust review and the shape → orient → implement → review → release pipeline |
+| [frontend-skills](../frontend-skills) | UI engineering, accessibility, Tailwind v4, component reference, scroll motion |
+| [infra-skills](../infra-skills) | AWS, GCP, DNS, mail auth, SSO, OAuth providers, preview environments, and workstation operations |
+| [delivery-skills](../delivery-skills) | Deploy, QA, release — and the governance chains: trust review and the shape → orient → implement → review → release pipeline |
 
 What stays here is the part that applies whatever you are building: how to work, what to check,
 and what to refuse.

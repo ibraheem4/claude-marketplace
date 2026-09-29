@@ -1,6 +1,6 @@
 # Marketing Skills
 
-Marketing and content skills for Claude Code. Companion to [agent-skills](https://github.com/ibraheem4/agent-skills), which covers engineering practice — these cover the writing and the page.
+Marketing and content skills for Claude Code. Companion to [agent-skills](../agent-skills), which covers engineering practice — these cover the writing and the page.
 
 ## Skills
 

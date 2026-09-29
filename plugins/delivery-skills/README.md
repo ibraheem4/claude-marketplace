@@ -1,6 +1,6 @@
 # Delivery Skills
 
-Executable agent workflows for tasks that go beyond code patterns — deployment, QA testing, dependency triage, and release management. Builds on the public [agent-skills](https://github.com/ibraheem4/agent-skills) repo for core engineering patterns.
+Executable agent workflows for tasks that go beyond code patterns — deployment, QA testing, dependency triage, and release management. Builds on the public [agent-skills](../agent-skills) repo for core engineering patterns.
 
 ## Skills
 
@@ -39,5 +39,5 @@ author.
 changed, the change is made in an isolated worktree, reviewed read-only against the work order,
 and only then judged fit to ship.
 
-Both moved here from [agent-skills](https://github.com/ibraheem4/agent-skills) — they are
+Both moved here from [agent-skills](../agent-skills) — they are
 delivery operations, which is what this repo is for.

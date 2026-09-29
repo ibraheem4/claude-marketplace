@@ -8,37 +8,39 @@ Claude Code plugin marketplace.
 
 ## Plugins
 
-| Plugin | Covers | Repo |
+| Plugin | Covers | Path |
 |---|---|---|
-| `agent-skills` | Engineering practice: how to work, what to check, what to refuse | `ibraheem4/agent-skills` |
-| `frontend-skills` | UI engineering, accessibility, Tailwind v4, design contracts | `ibraheem4/frontend-skills` |
-| `infra-skills` | AWS, GCP, DNS, identity, preview environments, workstation ops | `ibraheem4/infra-skills` |
-| `delivery-skills` | Deploy, QA, release, and the trust and delivery governance chains | `ibraheem4/delivery-skills` |
-| `marketing-skills` | Copy, SEO, CRO, email, analytics, competitor teardown | `ibraheem4/marketing-skills` |
-| `vendor-ops` | Issue trackers and knowledge wikis | `ibraheem4/ops-skills` |
+| `agent-skills` | Engineering practice: how to work, what to check, what to refuse | `plugins/agent-skills` |
+| `frontend-skills` | UI engineering, accessibility, Tailwind v4, design contracts | `plugins/frontend-skills` |
+| `infra-skills` | AWS, GCP, DNS, identity, preview environments, workstation ops | `plugins/infra-skills` |
+| `delivery-skills` | Deploy, QA, release, and the trust and delivery governance chains | `plugins/delivery-skills` |
+| `marketing-skills` | Copy, SEO, CRO, email, analytics, competitor teardown | `plugins/marketing-skills` |
+| `vendor-ops` | Issue trackers and knowledge wikis | `plugins/vendor-ops` |
 
-## How a version reaches an install
+## How a change reaches an install
 
-An install directory is keyed by the **version string** in this manifest:
-`~/.claude/plugins/cache/<marketplace>/<plugin>/<version>/`. A version bump is what
-triggers a re-fetch — pushing alone does not.
+Every plugin lives in this repo under `plugins/<name>`, and its entry above uses
+`"source": "./plugins/<name>"`. Each was imported from its own repo on 2026-09-29 with
+`git subtree`, history kept; the old per-plugin repos are no longer the source.
 
-So, in order:
+The install cache is keyed by the **version string**:
+`~/.claude/plugins/cache/<marketplace>/<plugin>/<version>/`. Pushing alone does not re-fetch.
 
-1. Merge the plugin repo and bump its `.claude-plugin/plugin.json`.
-2. Then bump the version here. Every `source` is a plain git URL with no ref, so it
-   resolves the default branch — bumping this first caches stale content under a fresh
-   version number, which then reads as current and never re-fetches.
-3. `/plugin update` and restart. Merged is not installed.
+1. Change the skill, and in the **same commit** bump the version in both
+   `plugins/<name>/.claude-plugin/plugin.json` and its entry in `.claude-plugin/marketplace.json`.
+2. Push `main`.
+3. `claude plugin marketplace update ibraheem4`, `claude plugin update <name>@ibraheem4`,
+   then restart. Merged is not installed.
 
 ## Adding a plugin
 
-Give it its own repo with `skills/<name>/SKILL.md` and a `.claude-plugin/plugin.json`,
-then add an entry above. Keep project-specific skills out of `agent-skills` — that plugin
-is for things that apply everywhere.
+Add `plugins/<name>/` with `skills/<skill>/SKILL.md` and `.claude-plugin/plugin.json`, then
+an entry above. Keep project-specific skills out of `agent-skills` — that plugin is for
+things that apply everywhere.
 
 ## Codex
 
 Claude Code plugins do not serve the Codex runtime. `~/.codex/skills/` holds symlinks into
-the local checkouts and must not be torn down. Those are filesystem paths, so moving a repo
-between GitHub owners does not affect them.
+`plugins/<name>/skills/` in the local checkout (`~/Projects/skills/claude-marketplace`) and
+must not be torn down. Moving this repo on disk breaks them; moving it between GitHub owners
+does not.

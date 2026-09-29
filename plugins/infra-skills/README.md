@@ -1,7 +1,7 @@
 # Infra Skills
 
 Infrastructure and machine operations for AI coding agents. Split out of
-[agent-skills](https://github.com/ibraheem4/agent-skills), which keeps the engineering practice —
+[agent-skills](../agent-skills), which keeps the engineering practice —
 these are the ones that touch real infrastructure or a real workstation, where a mistake costs
 something outside the repository.
 

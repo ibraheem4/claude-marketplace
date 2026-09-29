@@ -12,80 +12,62 @@
     {
       "name": "agent-skills",
       "description": "Project-agnostic engineering practice and workstation operations: operating principles, scope discipline, incremental implementation, code review, security and threat modeling, performance, observability, git workflow, PR lifecycle and shipping; plus disk reclaim, hidden-service discovery, safe repo removal, failing-fleet triage, per-PR preview environments, local bring-up, AWS and DNS infrastructure, false verification signals, session handoffs, verifying a document before citing it, wiring one instruction file across Claude, Codex, Gemini and Goose, and cross-source work summaries and prioritized work queues, and wiring social OAuth providers whose client secret is shown exactly once; plus accessibility engineering, Tailwind v4 conventions, and reviewing UI against web interface guidelines.",
-      "version": "1.4.0",
+      "version": "1.4.1",
       "author": {
         "name": "Ibraheem Abdul-Malik",
         "url": "https://github.com/ibraheem4"
       },
-      "source": {
-        "source": "url",
-        "url": "https://github.com/ibraheem4/agent-skills.git"
-      }
+      "source": "./plugins/agent-skills"
     },
     {
       "name": "vendor-ops",
       "description": "Vendor and tool operations for the systems a team coordinates in rather than builds: issue trackers, knowledge wikis and compliance platforms. Confirming a tracker connection points at the right workspace before writing, restraint about whose tickets you touch, filing a document in the collection its own taxonomy asks for, the wiki write calls that report success and change nothing, and remediating a compliance platform that reads live cloud state rather than code. Every workspace value comes from a profile.",
-      "version": "0.4.1",
+      "version": "0.4.2",
       "author": {
         "name": "Ibraheem Abdul-Malik",
         "url": "https://github.com/ibraheem4"
       },
-      "source": {
-        "source": "url",
-        "url": "https://github.com/ibraheem4/ops-skills.git"
-      }
+      "source": "./plugins/vendor-ops"
     },
     {
       "name": "delivery-skills",
       "description": "Delivery operations and governance: deploy, cloud build, QA, npm publish, dependency triage, planning, retros, reset and sunset \u2014 plus two chains with separation of duties. A trust chain (posture review, evidence investigation, remediation review, founder brief) and a delivery pipeline (shape work, repo orient, implement story, delivery review, release readiness), each step verified by someone other than its author.",
-      "version": "0.3.0",
-      "author": {
-        "name": "Ibraheem Abdul-Malik",
-        "url": "https://github.com/ibraheem4"
-      },
-      "source": {
-        "source": "url",
-        "url": "https://github.com/ibraheem4/delivery-skills.git"
-      }
-    },
-    {
-      "name": "marketing-skills",
-      "description": "Marketing and content practice: writing and editing marketing copy, stripping the patterns that make prose read as AI-written, designing a landing page and its signature creative moment, conversion optimization for pages and forms, popups, email sequences, A/B testing, analytics and measurement, technical SEO audits, AI/answer-engine SEO, a runnable SEO/AEO visibility scanner, programmatic SEO, structured data, marketing psychology, and tearing down a competitor's site for evidence. Most skills are from Corey Haines' MIT-licensed marketingskills library; see README for per-skill provenance.",
-      "version": "0.7.0",
-      "author": {
-        "name": "Ibraheem Abdul-Malik",
-        "url": "https://github.com/ibraheem4"
-      },
-      "source": {
-        "source": "url",
-        "url": "https://github.com/ibraheem4/marketing-skills.git"
-      }
-    },
-    {
-      "name": "frontend-skills",
-      "description": "Frontend and UI engineering: composition over configuration, accessibility by default, Tailwind v4 conventions, a component reference library, scroll-linked motion, reviewing a surface against web interface guidelines, writing the words inside a product interface, and designing or auditing screens against a design contract the workspace supplies.",
       "version": "0.3.1",
       "author": {
         "name": "Ibraheem Abdul-Malik",
         "url": "https://github.com/ibraheem4"
       },
-      "source": {
-        "source": "url",
-        "url": "https://github.com/ibraheem4/frontend-skills.git"
-      }
+      "source": "./plugins/delivery-skills"
     },
     {
-      "name": "infra-skills",
-      "description": "Infrastructure and machine operations: AWS and Terraform, DNS delegation, mail authentication records, Google Workspace SSO cutover, social OAuth providers, per-PR preview environments, GCP resource sweeps, plus workstation operations \u2014 disk reclaim, hidden services, failing-fleet triage, safe repo removal and cold local bring-up.",
-      "version": "0.1.1",
+      "name": "marketing-skills",
+      "description": "Marketing and content practice: writing and editing marketing copy, stripping the patterns that make prose read as AI-written, designing a landing page and its signature creative moment, conversion optimization for pages and forms, popups, email sequences, A/B testing, analytics and measurement, technical SEO audits, AI/answer-engine SEO, a runnable SEO/AEO visibility scanner, programmatic SEO, structured data, marketing psychology, and tearing down a competitor's site for evidence. Most skills are from Corey Haines' MIT-licensed marketingskills library; see README for per-skill provenance.",
+      "version": "0.7.1",
       "author": {
         "name": "Ibraheem Abdul-Malik",
         "url": "https://github.com/ibraheem4"
       },
-      "source": {
-        "source": "url",
-        "url": "https://github.com/ibraheem4/infra-skills.git"
-      }
+      "source": "./plugins/marketing-skills"
+    },
+    {
+      "name": "frontend-skills",
+      "description": "Frontend and UI engineering: composition over configuration, accessibility by default, Tailwind v4 conventions, a component reference library, scroll-linked motion, reviewing a surface against web interface guidelines, writing the words inside a product interface, and designing or auditing screens against a design contract the workspace supplies.",
+      "version": "0.3.2",
+      "author": {
+        "name": "Ibraheem Abdul-Malik",
+        "url": "https://github.com/ibraheem4"
+      },
+      "source": "./plugins/frontend-skills"
+    },
+    {
+      "name": "infra-skills",
+      "description": "Infrastructure and machine operations: AWS and Terraform, DNS delegation, mail authentication records, Google Workspace SSO cutover, social OAuth providers, per-PR preview environments, GCP resource sweeps, plus workstation operations \u2014 disk reclaim, hidden services, failing-fleet triage, safe repo removal and cold local bring-up.",
+      "version": "0.1.2",
+      "author": {
+        "name": "Ibraheem Abdul-Malik",
+        "url": "https://github.com/ibraheem4"
+      },
+      "source": "./plugins/infra-skills"
     }
   ]
 }
