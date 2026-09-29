@@ -50,7 +50,7 @@ const DEFAULTS = {
   maxSitemaps: 3,
   deadlineMs: 20_000,
   allowLocal: false,
-  userAgent: 'Mozilla/5.0 (compatible; ai-visibility-scan/0.2; +https://github.com/ibraheem4/marketing-skills)',
+  userAgent: 'Mozilla/5.0 (compatible; ai-visibility-scan/0.2; +https://github.com/ibraheem4/claude-marketplace/tree/main/plugins/marketing-skills)',
 }
 
 export async function get(url, opts = {}) {
