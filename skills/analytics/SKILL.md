@@ -5,8 +5,8 @@ license: MIT
 metadata:
   author: Corey Haines
   source: https://github.com/coreyhaines31/marketingskills
-  derived: false  # copied unmodified
-  version: 2.0.1
+  derived: true  # UTM governance and attribution workflow extended locally
+  version: 2.0.1-lucitra.1
 ---
 
 # Analytics Tracking
@@ -185,6 +185,10 @@ dataLayer.push({
 
 ## UTM Parameter Strategy
 
+For campaign-link creation, taxonomy design, attribution capture, registry fields and end-to-end
+validation, read [references/utm-governance.md](references/utm-governance.md). Do not publish tagged
+links or change a live analytics property without approval of the exact payload.
+
 ### Standard Parameters
 
 | Parameter | Purpose | Example |
@@ -197,9 +201,20 @@ dataLayer.push({
 
 ### Naming Conventions
 - Lowercase everything
-- Use underscores or hyphens consistently
-- Be specific but concise: `blog_footer_cta`, not `cta1`
-- Document all UTMs in a spreadsheet
+- Use one separator consistently; prefer underscores
+- Treat source, medium and campaign as controlled vocabularies, not free text
+- Put placement or creative differences in `utm_content`
+- Reserve `utm_term` for paid keyword or targeting analysis
+- Keep every published link in a shared campaign registry
+- Never place personal or confidential data in a UTM
+- Never add UTMs to internal links
+
+### Measurement Contract
+
+- Define the conversion event and decision before generating the URL
+- Preserve first-touch and last-touch campaign context under the site's consent policy
+- Verify a test visit and one conversion under the expected values
+- Report qualified or commercial outcomes when available, not traffic alone
 
 ---
 

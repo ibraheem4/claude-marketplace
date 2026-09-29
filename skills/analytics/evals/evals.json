@@ -4,7 +4,7 @@
     {
       "id": 1,
       "prompt": "Help me set up analytics tracking for our B2B SaaS product. We use GA4 and GTM. We need to track signups, feature usage, and upgrade events.",
-      "expected_output": "Should check for product-marketing.md first. Should apply the 'track for decisions' principle — ask what decisions the tracking will inform. Should use the event naming convention (object_action, lowercase with underscores). Should define essential events for SaaS: signup_completed, trial_started, feature_used, plan_upgraded, etc. Should provide GA4 implementation details with proper event parameters. Should include GTM data layer push examples. Should organize output as a tracking plan with event name, trigger, parameters, and purpose for each event.",
+      "expected_output": "Should check for product-marketing.md first. Should apply the 'track for decisions' principle \u2014 ask what decisions the tracking will inform. Should use the event naming convention (object_action, lowercase with underscores). Should define essential events for SaaS: signup_completed, trial_started, feature_used, plan_upgraded, etc. Should provide GA4 implementation details with proper event parameters. Should include GTM data layer push examples. Should organize output as a tracking plan with event name, trigger, parameters, and purpose for each event.",
       "assertions": [
         "Checks for product-marketing.md",
         "Applies 'track for decisions' principle",
@@ -19,20 +19,23 @@
     {
       "id": 2,
       "prompt": "What UTM parameters should we use? We run ads on Google, Meta, and LinkedIn, plus send a weekly newsletter and post on LinkedIn organically.",
-      "expected_output": "Should apply the UTM parameter strategy framework. Should define consistent UTM conventions: source (google, meta, linkedin, newsletter), medium (cpc, paid-social, email, organic-social), campaign (naming convention with date or identifier). Should provide specific UTM examples for each channel mentioned. Should warn about common UTM mistakes (inconsistent casing, redundant parameters, missing medium). Should recommend a UTM tracking spreadsheet or naming convention document.",
+      "expected_output": "Should apply the UTM governance workflow: define the conversion and decision first; use controlled, lowercase source, medium, campaign, and content values; provide specific examples for Google, Meta, LinkedIn, newsletter, and organic LinkedIn; reserve term for paid targeting; prohibit PII and UTMs on internal links; register every publishable link; and define first-touch, last-touch, and end-to-end validation through one conversion.",
       "assertions": [
-        "Applies UTM parameter strategy",
-        "Defines source, medium, and campaign conventions",
-        "Provides specific UTM examples for each channel",
-        "Uses consistent naming conventions (lowercase)",
-        "Warns about common UTM mistakes",
-        "Recommends tracking documentation"
+        "Defines the conversion and decision before generating URLs",
+        "Defines controlled source, medium, campaign, and content conventions",
+        "Provides specific UTM examples for each named channel",
+        "Uses consistent lowercase naming",
+        "Prohibits PII in tagged URLs",
+        "Prohibits UTMs on internal links",
+        "Requires a campaign registry",
+        "Defines first-touch and last-touch handling",
+        "Requires one verified test conversion"
       ],
       "files": []
     },
     {
       "id": 3,
-      "prompt": "our tracking seems broken — we're seeing duplicate events and our conversion numbers in GA4 don't match what our database shows. help?",
+      "prompt": "our tracking seems broken \u2014 we're seeing duplicate events and our conversion numbers in GA4 don't match what our database shows. help?",
       "expected_output": "Should trigger on casual phrasing. Should apply the debugging and validation framework. Should systematically check for common issues: duplicate GTM tags firing, missing event deduplication, incorrect trigger conditions, cross-domain tracking issues, consent mode filtering. Should provide specific debugging steps: use GA4 DebugView, GTM Preview mode, browser developer tools. Should address the GA4 vs database discrepancy (common causes: consent mode, ad blockers, client-side vs server-side tracking, session timeout differences).",
       "assertions": [
         "Triggers on casual phrasing",
@@ -83,6 +86,23 @@
         "References or defers to ab-testing skill",
         "May help with tracking implementation specifics",
         "Does not attempt to design the full experiment"
+      ],
+      "files": []
+    },
+    {
+      "id": 7,
+      "prompt": "I want to track people who reach my services business from my LinkedIn profile, Featured section, posts, and qualified DMs all the way to booked calls and won work. Set up the UTM plan.",
+      "expected_output": "Should separate platform, channel class, initiative, and placement into source, medium, campaign, and content; create distinct profile, Featured, post, and DM links; avoid tagging internal navigation; define a successful booking rather than a click as the site conversion; preserve first and last touch; carry approved attribution into the CRM; create registry rows; and identify any scheduler or cross-domain attribution gap before claiming the funnel is tracked.",
+      "assertions": [
+        "Uses linkedin as source and distinguishes placement in content",
+        "Uses a controlled medium for organic social and direct messages",
+        "Creates distinct links for profile, Featured, posts, and DMs",
+        "Defines booked call as a successful conversion rather than a click",
+        "Preserves first-touch and last-touch attribution",
+        "Carries approved attribution into CRM fields",
+        "Requires campaign registry rows",
+        "Checks scheduler or cross-domain attribution",
+        "Does not publish or modify LinkedIn without approval"
       ],
       "files": []
     }

@@ -10,11 +10,12 @@ Marketing and content skills for Claude Code. Companion to [agent-skills](https:
 | `copy-editing` | Editing copy that already exists, in focused passes |
 | `stop-slop` | Removing the patterns that make prose read as AI-written |
 | `landing-page` | Designing a single-offer page: structure, layout, conversion, SEO |
+| `creative-direction` | One original signature moment for a page — hero, interaction, colour story — prototyped live |
 | `cro` | Improving conversion on any page or form |
 | `popups` | Popups, modals, overlays, slide-ins and banners |
 | `emails` | Email sequences, drip campaigns and lifecycle flows |
 | `ab-testing` | Planning or implementing an experiment |
-| `analytics` | Setting up or auditing tracking and measurement |
+| `analytics` | Setting up or auditing tracking, UTM governance, attribution and measurement |
 | `seo-audit` | Diagnosing why a site is not ranking — technical and on-page |
 | `ai-seo` | Getting cited by AI assistants and answer engines |
 | `ai-visibility-scan` | Measuring SEO/AEO/GEO by fetching the site — foundations plus answer-engine readiness, with a dated artefact |
@@ -35,12 +36,12 @@ frontmatter carries its own `author`, `source` and whether it was modified.
 
 | Skills | Origin | License |
 |---|---|---|
-| `ab-testing`, `ai-seo`, `analytics`, `cro`, `emails`, `marketing-psychology`, `popups`, `programmatic-seo` | [coreyhaines31/marketingskills](https://github.com/coreyhaines31/marketingskills) — **copied unmodified** | MIT, © 2025 Corey Haines |
-| `copywriting`, `copy-editing`, `seo-audit`, `schema` | [coreyhaines31/marketingskills](https://github.com/coreyhaines31/marketingskills) — **modified** | MIT, © 2025 Corey Haines |
+| `ab-testing`, `ai-seo`, `cro`, `emails`, `marketing-psychology`, `popups`, `programmatic-seo` | [coreyhaines31/marketingskills](https://github.com/coreyhaines31/marketingskills) — **copied unmodified** | MIT, © 2025 Corey Haines |
+| `analytics`, `copywriting`, `copy-editing`, `seo-audit`, `schema` | [coreyhaines31/marketingskills](https://github.com/coreyhaines31/marketingskills) — **modified** | MIT, © 2025 Corey Haines |
 | `stop-slop` | [hardikpandya/stop-slop](https://github.com/hardikpandya/stop-slop) — modified | MIT, © 2025 Hardik Pandya |
 | `landing-page` | [MengTo/Skills](https://github.com/MengTo/Skills) — copied unmodified | MIT, © 2026 Meng To |
 | `ai-visibility-scan` | Original — written for this repository | MIT, © 2026 Ibraheem Abdul-Malik |
-| `site-teardown` | original | MIT, © 2026 Ibraheem Abdul-Malik |
+| `site-teardown`, `creative-direction` | original | MIT, © 2026 Ibraheem Abdul-Malik |
 
 Corey Haines' library is the substantial majority of this set and is worth using directly —
 it has 50 skills where this has 15. This repository exists because a smaller, self-consistent
