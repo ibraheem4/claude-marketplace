@@ -14,6 +14,8 @@ before any screen is designed.
 Workspace values come from a profile, never from this skill. Resolve one first:
 `~/<workspace>/.claude/workspace.config.md` — the workspace the caller named, or the single
 match of `~/*/.claude/workspace.config.md`. None: say which keys are needed and stop.
+A key the profile leaves out means the workspace has none of that thing: say so, and skip
+what depends on it — unless skipping leaves a write unguarded, then stop.
 
 | Key | Used for |
 |---|---|
@@ -21,7 +23,6 @@ match of `~/*/.claude/workspace.config.md`. None: say which keys are needed and 
 | `{{design_reference}}` | Generated token manifest, if the contract produces one |
 | `{{token_package}}` | The semantic token package a consumer imports |
 | `{{ui_package}}` | The shared component package |
-| `{{product_surfaces}}` | Which surfaces this contract governs |
 
 `references/contract-example.md` shows what a contract contains and how to write one when the
 workspace has none. **It is an example, not the contract** — never treat its values as defaults.
