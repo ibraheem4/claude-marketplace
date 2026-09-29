@@ -59,7 +59,11 @@ merged" but "who can apply it to every account, and when".
 
 - **Org `auto_enable` reaches only accounts added after it was set.** Security Hub,
   Inspector and similar leave pre-existing accounts unsubscribed; add explicit member
-  resources for them.
+  resources for them. Before adding standards subscriptions too, check whether the account has
+  Security Hub at all (`describe-hub`). Where it's off, AWS's `CreateMembers` enables it *and*
+  the default standards (FSBP and CIS 1.2), so a separate subscription resource is redundant.
+  An account that already has Security Hub keeps its standards unchanged. Name the
+  post-apply check (`get-enabled-standards`) in the PR.
 - **Box-ticking controls still get done.** An IAM password policy with no IAM console users
   changes nobody's sign-in. Apply it, and say in a comment why it exists.
 - **Management account counts.** Baseline modules usually cover members only; add the

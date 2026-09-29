@@ -22,7 +22,7 @@
     {
       "name": "vendor-ops",
       "description": "Vendor and tool operations for the systems a team coordinates in rather than builds: issue trackers, knowledge wikis and compliance platforms. Confirming a tracker connection points at the right workspace before writing, restraint about whose tickets you touch, filing a document in the collection its own taxonomy asks for, the wiki write calls that report success and change nothing, and remediating a compliance platform that reads live cloud state rather than code. Every workspace value comes from a profile.",
-      "version": "0.4.2",
+      "version": "0.4.3",
       "author": {
         "name": "Ibraheem Abdul-Malik",
         "url": "https://github.com/ibraheem4"
