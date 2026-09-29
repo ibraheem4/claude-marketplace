@@ -25,7 +25,7 @@
     {
       "name": "vendor-ops",
       "description": "Vendor and tool operations for the systems a team coordinates in rather than builds: issue trackers, knowledge wikis and compliance platforms. Confirming a tracker connection points at the right workspace before writing, restraint about whose tickets you touch, filing a document in the collection its own taxonomy asks for, the wiki write calls that report success and change nothing, and remediating a compliance platform that reads live cloud state rather than code. Every workspace value comes from a profile.",
-      "version": "0.4.0",
+      "version": "0.4.1",
       "author": {
         "name": "Ibraheem Abdul-Malik",
         "url": "https://github.com/ibraheem4"
@@ -64,7 +64,7 @@
     {
       "name": "frontend-skills",
       "description": "Frontend and UI engineering: composition over configuration, accessibility by default, Tailwind v4 conventions, a component reference library, scroll-linked motion, reviewing a surface against web interface guidelines, writing the words inside a product interface, and designing or auditing screens against a design contract the workspace supplies.",
-      "version": "0.3.0",
+      "version": "0.3.1",
       "author": {
         "name": "Ibraheem Abdul-Malik",
         "url": "https://github.com/ibraheem4"
@@ -77,7 +77,7 @@
     {
       "name": "infra-skills",
       "description": "Infrastructure and machine operations: AWS and Terraform, DNS delegation, mail authentication records, Google Workspace SSO cutover, social OAuth providers, per-PR preview environments, GCP resource sweeps, plus workstation operations \u2014 disk reclaim, hidden services, failing-fleet triage, safe repo removal and cold local bring-up.",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "author": {
         "name": "Ibraheem Abdul-Malik",
         "url": "https://github.com/ibraheem4"
