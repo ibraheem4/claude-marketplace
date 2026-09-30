@@ -27,6 +27,20 @@ test('the homepage is the first page read, even when the sitemap omits it', asyn
   assert.equal(r.pages[1].url, site.origin + '/a')
 })
 
+test('a redirected page is recorded where it landed, and read once', async (t) => {
+  const site = await serve((o) => ({
+    '/': { body: html({ title: 'Home' }) },
+    '/robots.txt': { type: 'text/plain', body: `User-agent: *\nAllow: /\nSitemap: ${o}/sitemap.xml\n` },
+    '/sitemap.xml': sitemap(o, ['/contact-us', '/contact', '/about']),
+    '/contact-us': { status: 301, headers: { location: '/contact' } },
+    '/contact': { body: html({ title: 'Contact' }) },
+    '/about': { body: html({ title: 'About' }) },
+  }))
+  t.after(site.close)
+  const r = await scanSite(site.origin, OPTS)
+  assert.deepEqual(r.pages.map((p) => new URL(p.url).pathname), ['/', '/contact', '/about'])
+})
+
 test('a refused homepage still reads robots.txt and the discovery files', async (t) => {
   const site = await serve(() => ({
     '/': { status: 403, body: 'no' },

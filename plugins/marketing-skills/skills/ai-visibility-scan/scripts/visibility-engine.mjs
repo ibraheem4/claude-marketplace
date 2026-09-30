@@ -417,6 +417,11 @@ const pathFor = (origin, url) => {
   try { const u = new URL(url); return u.origin === origin ? u.pathname + u.search : u.href } catch { return url }
 }
 
+// Where a same-origin redirect ended, in the origin + pathname form the page list uses.
+const landedAt = (url, origin) => {
+  try { const u = new URL(url); return u.origin === origin ? u.origin + u.pathname : null } catch { return null }
+}
+
 export async function scanSite(input, opts = {}) {
   const base = { ...DEFAULTS, ...opts }
   const origin = new URL(/^https?:\/\//.test(input) ? input : `https://${input}`).origin
@@ -519,13 +524,22 @@ async function crawl(origin, startedAt, o) {
   }
 
   const pages = []
-  for (const url of urls) {
+  const read = new Set()
+  for (let url of urls) {
     if (o.signal.aborted) break
     // A page fetch the deadline or an abort cut short was never read — it gets
     // no entry and no event, same as checkedGet's contract elsewhere. Recording
     // it as page-unreachable claimed we found it broken when we just ran out of time.
     const res = url === homeUrl ? home : await checkedGet(url, o)
     if (!res) break
+    // A page is recorded where it landed, and read once. Keyed by the URL
+    // requested, a sitemap's /contact-us (301 → /contact) was reported as a
+    // page nothing links to while /contact was linked from every page. The
+    // homepage keeps its own URL: the first-paragraph check looks it up by /.
+    const at = url !== homeUrl && res.redirected ? landedAt(res.url, origin) ?? url : url
+    if (read.has(at)) continue
+    read.add(at)
+    url = at
     if (!res.ok) {
       // Every section array must exist even here. Omitting them made flatMap
       // yield undefined and the summary crash on the next site scanned.

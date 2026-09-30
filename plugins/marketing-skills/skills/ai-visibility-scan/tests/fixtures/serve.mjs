@@ -8,7 +8,7 @@ export async function serve(build) {
     const r = routes[req.url]
     if (!r) { res.writeHead(404, { 'content-type': 'text/plain' }).end('not found'); return }
     const send = () => {
-      res.writeHead(r.status ?? 200, { 'content-type': r.type ?? 'text/html' })
+      res.writeHead(r.status ?? 200, { 'content-type': r.type ?? 'text/html', ...r.headers })
       res.end(r.body ?? '')
     }
     if (r.delay) setTimeout(send, r.delay)
