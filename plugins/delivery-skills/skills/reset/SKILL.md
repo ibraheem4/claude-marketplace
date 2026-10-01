@@ -1,130 +1,85 @@
 ---
 name: reset
-description: "Reset all repos to a clean state: commit/push pending work, sync submodules, prune worktrees, sync skills, and verify everything is up to date. Use when starting a new session, switching context, or when things feel messy."
+description: "Bring a multi-repo workspace back to a known state: report uncommitted and unpushed work, prune worktrees, sync submodules, and check each repo's GitHub Actions status on its working and release branches. Use when starting a session, switching context, or when the user says 'reset' or things feel out of sync."
 user_invocable: true
-argument-hint: "[--dry-run]"
+argument-hint: "[<workspace-dir>] [--dry-run]"
 ---
 
-# Reset: Full Workspace Reset
+# Reset the Workspace
 
-Bring every repo, submodule, worktree, and skill symlink back to a clean, synced state. Run this at the start of a session, after a big feature lands, or when things feel out of sync.
+Report first, then act only on what is safe to do without asking. Uncommitted work is never
+touched without the user's say-so.
 
-## Arguments
+## 1. Find the repos
 
-- **--dry-run**: Report what would be done without taking action
+The workspace is the directory given, or the current one. Its repos are every direct child with a
+`.git`, plus submodules of any of them. Note each repo's working branch (`dev` if it has one,
+otherwise the default) and its release branch (`main`).
 
-## Step 1: Check for Uncommitted Work
+## 2. Uncommitted and unpushed work
 
-For each repo and submodule in the workspace, check `git status`:
-
-```bash
-# From the root of the monorepo/workspace
-git submodule foreach --recursive 'echo "=== $name ===" && git status --short'
-```
-
-- If a repo has uncommitted changes, **report them** — don't auto-commit
-- If changes exist, ask the user: commit, stash, or skip?
-- Never silently discard uncommitted work
-
-## Step 2: Push Unpushed Commits
-
-For each repo with committed but unpushed work:
+For each repo:
 
 ```bash
-git submodule foreach --recursive '
-  branch=$(git branch --show-current)
-  ahead=$(git rev-list --count origin/$branch..HEAD 2>/dev/null || echo 0)
-  [ "$ahead" -gt 0 ] && echo "$name: $ahead unpushed commits on $branch"
-'
+git -C <repo> status --short
+git -C <repo> fetch -q origin
+git -C <repo> rev-list --count @{u}..HEAD 2>/dev/null   # unpushed
+git -C <repo> rev-list --count HEAD..@{u} 2>/dev/null   # behind
 ```
 
-Push each with explicit ref:
-```bash
-git push origin {branch}
-```
+- Uncommitted changes: **report them, and ask** whether to commit, stash or leave them. Never
+  discard, and never commit them on your own.
+- Unpushed commits: list them and ask before pushing. Push with an explicit refspec,
+  `git push origin <branch>:refs/heads/<branch>`, dry-run first. A bare push can target the
+  upstream branch, which may be `main`.
+- Behind: fast-forward only (`git pull --ff-only`) and only on a clean tree.
 
-## Step 3: Update Submodules
-
-Fetch latest from tracked branches and update all submodules:
-
-```bash
-git fetch origin
-git submodule update --init --recursive --remote
-```
-
-Check for submodules that are ahead of what the parent repo tracks (`+` in `git submodule status`). For each:
-- If the submodule is on its tracked branch and has new commits, update the parent pointer
-- Stage the submodule pointer update for a commit in Step 6
-
-## Step 4: Prune Worktrees
-
-For every repo (including submodules), list and clean up worktrees:
+## 3. Worktrees
 
 ```bash
-git submodule foreach --recursive 'git worktree prune 2>/dev/null'
-git worktree prune
+git -C <repo> worktree list
+git -C <repo> worktree prune     # drops entries whose directory is already gone
 ```
 
-Also check for worktree directories that exist but aren't registered:
-```bash
-find . -path '*/.claude/worktrees/*' -maxdepth 5 -type d 2>/dev/null
-```
+A worktree directory that exists but isn't registered can still hold uncommitted work. Report it
+with its `git status`. Don't remove it.
 
-Remove any orphaned worktree directories.
-
-## Step 5: Sync Skills
-
-If the skills sync script exists, run it:
+## 4. Submodules (only where `.gitmodules` exists)
 
 ```bash
-if [ -x scripts/sync-skills.sh ]; then
-  ./scripts/sync-skills.sh
-elif [ -x ../acme-agent-company/scripts/sync-skills.sh ]; then
-  ../acme-agent-company/scripts/sync-skills.sh
-fi
+git -C <repo> submodule update --init --recursive
+git -C <repo> submodule status   # "+" = checked out at a different commit than recorded
 ```
 
-This syncs:
-- Public skills (agent-skills) → company package + ~/.claude/skills symlinks
-- Private skills (delivery-skills) → company package + ~/.claude/skills symlinks
-- Removes broken symlinks
+Report pointer drift. Advancing a pointer is a commit in the parent repo, so ask first, stage
+the submodule path explicitly, and push it with the parent.
 
-## Step 6: Commit Submodule Pointer Updates
+## 5. GitHub Actions status
 
-If submodule pointers changed in Step 3:
+For each repo with a GitHub remote, the latest run per workflow on the working and release
+branches:
 
 ```bash
-git add -A
-git status --short
+gh run list -R <owner>/<repo> --branch <branch> --limit 10 \
+  --json workflowName,conclusion,status,headSha,createdAt
 ```
 
-If there are staged submodule pointer changes, commit:
-```
-chore: update submodule pointers
+Keep the newest run per workflow. Flag failures and runs still in progress. A red release branch
+is the first thing to report. For a failing deploy, point at `deploy-status`.
 
-Co-Authored-By: Claude <noreply@anthropic.com>
-```
-
-Push the parent repo.
-
-## Step 7: Report
+## 6. Report
 
 ```
-=== Workspace Reset Complete ===
-
-Repos:        {N} checked, {N} clean, {N} had changes
-Submodules:   {N} updated, {N} already current
-Worktrees:    {N} pruned, {N} remaining
-Skills:       {N} synced, {N} symlinks
-Unpushed:     {N} repos pushed
-
-All repos on tracked branches. Workspace is clean.
+Workspace reset: <dir>
+Repos:       N checked · N clean · N with uncommitted work (listed)
+Unpushed:    N repos (listed, pushed only if approved)
+Worktrees:   N pruned · N unregistered dirs (listed, kept)
+Submodules:  N drifted (listed)
+Actions:     N green · N failing (repo/branch/workflow) · N running
 ```
 
-## Important Rules
+## Rules
 
-- **Never discard uncommitted work** — always ask the user first
-- **Never force-push** — regular push only
-- **Report before acting** — show what will change, then do it
-- **Submodule pushes use explicit refs** — bare `git push` in submodules goes to the tracked branch, which may not be what you want
-- **Idempotent** — running reset twice should produce the same result
+- Never discard or auto-commit work. Never force-push.
+- Stage explicit paths, never `git add -A`. Other sessions may share the checkout.
+- Idempotent: a second run on a clean workspace changes nothing.

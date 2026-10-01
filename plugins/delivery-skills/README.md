@@ -11,10 +11,10 @@ Executable agent workflows for tasks that go beyond code patterns — deployment
 | **retro** | Generate engineering retrospective from git history |
 | **npm-publish** | Version bump, build, publish, tag, and push |
 | **triage-dependabot** | Triage Dependabot PRs: close superseded, merge safe, rebase stale |
-| **reset** | Full workspace reset: sync submodules, prune worktrees, sync skills, verify clean state |
-| **deploy** | Deploy a service to dev or prod with pre-flight validation |
-| **cloud-build** | Monitor cloud build status, view logs, diagnose failures |
-| **sunset** | Sunset a service: remove submodule, disable infra, archive repo |
+| **reset** | Workspace reset: uncommitted and unpushed work, worktrees, submodules, GitHub Actions status per repo |
+| **deploy** | Deploy through the repo's GitHub Actions workflow: confirm the trigger, promote or dispatch, hand off to deploy-status |
+| **deploy-status** | GitHub Actions deploy runs: status, failed-step logs, watch, and confirm the target is serving |
+| **sunset** | Decommission a service: stop its deploys, retire infra through IaC, archive the repo, clear references |
 
 ## Setup
 
