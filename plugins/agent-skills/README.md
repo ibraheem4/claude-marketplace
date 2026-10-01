@@ -68,6 +68,11 @@ AI agents fail differently than humans:
 - **[session-handoff](skills/session-handoff/)** — Write a continuation prompt a cold session can act on: absolute paths, real shas, verified vs assumed, one next step. Closing a session also updates tickets, the system of record and internal and external docs, then lints. *[Agent-specific]*
 - **[work-summary](skills/work-summary/)** — Summarize one workspace's activity for any period across ten sources and post it. Profile-driven. *[Agent-specific]*
 - **[work-queue](skills/work-queue/)** — The inverse: what is owed, not what is done. Nine sources into six ranked bands. Read-only, profile-driven. *[Agent-specific]*
+- **[local-bringup](skills/local-bringup/)** — Cold clone to an app you have *seen* working: toolchain pins, port and database collisions. *[Agent-specific]*
+- **[disk-reclaim](skills/disk-reclaim/)** — Caches before working trees; `dist/` is not automatically untracked. *[Agent-specific]*
+- **[find-hidden-services](skills/find-hidden-services/)** — A process that respawns means you found one spawner, not all of them. *[Agent-specific]*
+- **[triage-failing-fleet](skills/triage-failing-fleet/)** — Collapse logs to distinct lines, then walk the dependency chain to the one upstream cause. *[Agent-specific]*
+- **[safe-repo-removal](skills/safe-repo-removal/)** — Prove every commit is recoverable before deleting a repository. *[Agent-specific]*
 
 ### Foundations
 - **[agent-operating-principles](skills/agent-operating-principles/)** — Core behaviors: surface assumptions, stop when confused, don't be sycophantic, admit uncertainty. *[Agent-specific]*
@@ -82,11 +87,12 @@ selection context should carry. Each is a plugin of its own:
 | Plugin | Covers |
 |---|---|
 | [frontend-skills](../frontend-skills) | UI engineering, accessibility, Tailwind v4, component reference, scroll motion |
-| [infra-skills](../infra-skills) | AWS, GCP, DNS, mail auth, SSO, OAuth providers, preview environments, and workstation operations |
+| [infra-skills](../infra-skills) | AWS, GCP, DNS, mail auth, SSO, OAuth providers, preview environments |
 | [delivery-skills](../delivery-skills) | Deploy, QA, release — and the governance chains: trust review and the shape → orient → implement → review → release pipeline |
 
 What stays here is the part that applies whatever you are building: how to work, what to check,
-and what to refuse.
+and what to refuse. The five workstation skills came back on 2026-10-01: they apply on every
+machine, and in their own plugin they went uninvoked.
 
 ## Skills we deliberately do not ship
 
