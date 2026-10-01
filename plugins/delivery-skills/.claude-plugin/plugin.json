@@ -1,7 +1,7 @@
 {
   "name": "delivery-skills",
-  "description": "Delivery operations and governance: deploy, cloud build, QA, npm publish, dependency triage, planning, retros, reset and sunset \u2014 plus two chains with separation of duties. A trust chain (posture review, evidence investigation, remediation review, founder brief) and a delivery pipeline (shape work, repo orient, implement story, delivery review, release readiness), each step verified by someone other than its author.",
-  "version": "0.3.1",
+  "description": "Delivery operations and governance: GitHub Actions deploys and deploy status, QA, npm publish, dependency triage, planning, retros, reset and sunset \u2014 plus two chains with separation of duties. A trust chain (posture review, evidence investigation, remediation review, founder brief) and a delivery pipeline (shape work, repo orient, implement story, delivery review, release readiness), each step verified by someone other than its author.",
+  "version": "0.4.0",
   "author": {
     "name": "Ibraheem Abdul-Malik",
     "url": "https://github.com/ibraheem4"
