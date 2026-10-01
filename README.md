@@ -10,9 +10,9 @@ Claude Code plugin marketplace.
 
 | Plugin | Covers | Path |
 |---|---|---|
-| `agent-skills` | Engineering practice: how to work, what to check, what to refuse | `plugins/agent-skills` |
+| `agent-skills` | Engineering practice: how to work, what to check, what to refuse; workstation ops | `plugins/agent-skills` |
 | `frontend-skills` | UI engineering, accessibility, Tailwind v4, design contracts | `plugins/frontend-skills` |
-| `infra-skills` | AWS, GCP, DNS, identity, preview environments, workstation ops | `plugins/infra-skills` |
+| `infra-skills` | AWS, GCP, DNS, identity, preview environments | `plugins/infra-skills` |
 | `delivery-skills` | Deploy, QA, release, and the trust and delivery governance chains | `plugins/delivery-skills` |
 | `marketing-skills` | Copy, SEO, CRO, email, analytics, competitor teardown | `plugins/marketing-skills` |
 | `vendor-ops` | Issue trackers and knowledge wikis | `plugins/vendor-ops` |
