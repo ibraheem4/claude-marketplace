@@ -1,8 +1,8 @@
 ---
 name: creative-direction
-description: Develop an original creative direction for a marketing page's signature moment (hero animation, illustration, interaction, colour story) from rendered inspiration, then prototype it live. Use when the user asks for something "more creative", "better", "more unique", a new hero animation, mouse interaction, or inspiration from Awwwards, Godly, Dribbble, Behance, Siteinspire, Landingfolio, Mobbin, Screenlane, UI Sources or Figma Community. Do not use to tear down one named competitor (see site-teardown), to extract tokens and a component spec from a site (see analyze-website-style), or to write copy (see copywriting).
+description: Develop an original creative direction for a marketing page's signature moment (hero animation, illustration, interaction, colour story) from rendered inspiration, then prototype it live. Use when the user asks for something "more creative", "better", "more unique", a new hero animation, mouse interaction, or inspiration from Awwwards, Godly, Dribbble, Behance, Siteinspire, Landingfolio, Mobbin, Screenlane, UI Sources, Figma Community or CodePen. Do not use to tear down one named competitor (see site-teardown), to extract tokens and a component spec from a site (see analyze-website-style), or to write copy (see copywriting).
 metadata:
-  version: 1.0.0
+  version: 1.1.0
 ---
 
 # Creative direction
